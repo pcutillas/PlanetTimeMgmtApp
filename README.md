@@ -1,5 +1,5 @@
 # Planet Time Management/Calculation App
-Developed for free for Newport Corporation
+Developed for free for [Newport Corporation](https://www.newport.com/]
 
 ###
 Currently on first version. Missing functionality is:
