@@ -5,8 +5,8 @@ Developed for free for [Newport Corporation](https://www.newport.com/)
 - If you are looking for an executable, head to the releases section and download the latest one.
 - If you are looking to test this and run the python code
     - Clone the repository
-    - Before first run, launch the build-gui-files.bat file. (Only has to be done once after cloning)
-    - Run the app.py script.
+    - Before first run, launch the build-gui-files.bat file (Only has to be done once after cloning)
+    - Run the app.py script
 ##
 ### Notes
 - Currently on first working version. Missing functionality is:
