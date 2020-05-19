@@ -9,7 +9,7 @@ Developed for free for [Newport Corporation](https://www.newport.com/)
     - Run the app.py script. Step 2 only has to be done once after cloning.
 ##
 ### Notes
-- Currently on first version. Missing functionality is:
+- Currently on first working version. Missing functionality is:
    - Tabs 2 & 3
    - Time calculation (other than machine time) in table
 
