@@ -6,7 +6,7 @@ Developed for free for [Newport Corporation](https://www.newport.com/)
 - If you are looking to test this and run the python code
     - Clone the repository
     - Before first run, launch the build-gui-files.bat file
-    - Run the app.py script. Step 1 only has to be done once after cloning.
+    - Run the app.py script. Step 2 only has to be done once after cloning.
 ##
 ### Notes
 Currently on first version. Missing functionality is:
