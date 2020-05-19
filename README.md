@@ -1,7 +1,14 @@
-# Planet Time Management/Calculation App
+## Planet Time Management/Calculation App
 Developed for free for [Newport Corporation](https://www.newport.com/)
 
-###
+###Instructions
+- If you are looking for an executable, head to the releases section and download the latest one.
+- If you are looking to test this and run the python code
+    - Clone the repository
+    - Before first run, launch the build-gui-files.bat file
+    - Run the app.py script. Step 1 only has to be done once after cloning.
+##
+###Notes
 Currently on first version. Missing functionality is:
 - Tabs 2 & 3
 - Time calculation (other than machine time) in table

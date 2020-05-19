@@ -1,14 +1,12 @@
-# ---- NOTE: Keep "unused" imports: they are used by custom code that is only seen as a string. ---- #
 
 # From installed packages
-from PySide2.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QFileDialog, QMessageBox, QDialog
+from PySide2.QtWidgets import QApplication, QMainWindow, QFileDialog, QMessageBox, QDialog
 from PySide2.QtGui import QPalette, QColor, Qt, QPainter
 from PySide2.QtCore import Slot, QTime, Signal
 from PySide2.QtCharts import QtCharts
-from collections import OrderedDict
 from random import randrange
 import pickle
-import sys, os
+import os
 
 # From local project
 from src.planetconfigdialog import PlanetConfigDialog
@@ -34,16 +32,6 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
         self.setWindowTitle("Time Calculation App")
 
-        # Initializing layout for custom titlebar
-        # self.layout = QVBoxLayout()
-        # self.layout.addWidget(MyBar(self))
-        # self.setLayout(self.layout)
-        # self.layout.setContentsMargins(0, 0, 0, 0)
-        # self.layout.addStretch(-1)
-        # self.setMinimumSize(800, 400)
-        # self.setWindowFlags(Qt.FramelessWindowHint)
-        # self.pressing = False
-
         # Initializing Results Section
         headers = ['Machine', 'Planet', 'Labor (Hrs)', 'Machine Time (Hrs)', 'Setup (Hrs)', 'Test Run (Hrs)',
                    'Coating (Hrs)', 'Quantity', 'Yield', 'Scrap', '']
@@ -56,10 +44,11 @@ class MainWindow(QMainWindow):
         # Initialize variables needed
         self.machines = [Machine(), Machine(), Machine()]  # TODO: restructure to have planets w workorders in machines
         self.techID = None
-        self.theme = 0
+        self.theme = 1
 
-        # Initialize pie chart widgets
+        # Initialize pie chart widgets and set theme
         self.initPieCharts()
+        self.toggleTheme()
 
         # Connect Signals and Slots
         self.ui.addWorkOrderButton.clicked.connect(lambda: self.showWOInitDialog())
@@ -927,38 +916,3 @@ class MainWindow(QMainWindow):
                     exec(curPie + ".addSlice(tmpWO)")
                     self.results.addRowFor(tmpWO)
                     self.machines[0].workOrders.append(tmpWO)
-
-
-if __name__ == '__main__':
-    def stylize(qApp):
-        """
-        Light grey theme.
-        """
-        qApp.setStyle("Fusion")
-
-        dark_palette = QPalette()
-        dark_palette.setColor(QPalette.Window, QColor(180,180,180))
-        dark_palette.setColor(QPalette.WindowText, Qt.black)
-        dark_palette.setColor(QPalette.Base, QColor(140, 140, 140))
-        dark_palette.setColor(QPalette.AlternateBase, QColor(180,180,180))
-        dark_palette.setColor(QPalette.ToolTipBase, Qt.black)
-        dark_palette.setColor(QPalette.ToolTipText, Qt.black)
-        dark_palette.setColor(QPalette.Text, Qt.black)
-        dark_palette.setColor(QPalette.Button, QColor(180,180,180))
-        dark_palette.setColor(QPalette.ButtonText, Qt.black)
-        dark_palette.setColor(QPalette.BrightText, Qt.red)
-        dark_palette.setColor(QPalette.Link, QColor(42, 130, 218))
-        dark_palette.setColor(QPalette.Highlight, QColor(42, 130, 218))
-        dark_palette.setColor(QPalette.HighlightedText, Qt.white)
-        dark_palette.setColor(QPalette.Disabled, QPalette.Text, QColor(60, 60, 60))
-        dark_palette.setColor(QPalette.Disabled, QPalette.ButtonText, Qt.darkGray)
-        qApp.setPalette(dark_palette)
-        qApp.setStyleSheet("QToolTip { color: #ffffff; background-color: #2a82da; border: 1px solid white; }")
-
-    app = QApplication(sys.argv)
-    mainWindow = MainWindow()
-
-    stylize(app)
-
-    mainWindow.show()
-    sys.exit(app.exec_())
