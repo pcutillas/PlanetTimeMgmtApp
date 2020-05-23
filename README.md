@@ -1,5 +1,5 @@
 ## Planet Time Management/Calculation App
-Developed in six days for [Newport Corporation](https://www.newport.com/), for free
+Voluntarily developed in six days for [Newport Corporation](https://www.newport.com/)
 
 ### Instructions
 - If you are looking for an executable, head to the releases section and download the latest one.
