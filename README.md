@@ -1,7 +1,7 @@
 ## Planet Time Management/Calculation App
 Voluntarily developed in six days for [Newport Corporation](https://www.newport.com/)
 
-[A quick look at the GUI](https://github.com/Frenchman98/PlanetTimeMgmtApp/blob/master/demo.gif)
+![A quick look at the GUI](https://github.com/Frenchman98/PlanetTimeMgmtApp/blob/master/demo.gif)
 
 ### Instructions
 - If you are looking for an executable, head to the releases section and download the latest one.
