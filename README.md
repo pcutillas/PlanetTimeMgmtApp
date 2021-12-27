@@ -1,10 +1,10 @@
-## Planet Time Management/Calculation App
-Voluntarily developed in six days for [Newport Corporation](https://www.newport.com/)
+## Time Management/Calculation App
+Voluntarily developed for [Newport Corporation](https://www.newport.com/)
 
 ![A quick look at the GUI](https://github.com/Frenchman98/PlanetTimeMgmtApp/blob/master/demo.gif)
 
 ### Instructions
-- If you are looking for an executable, head to the releases section and download the latest one.
+- If you are looking for an executable, head to the [releases](https://github.com/Frenchman98/PlanetTimeMgmtApp/releases) and download the latest one, or click [here](https://github.com/Frenchman98/PlanetTimeMgmtApp/releases/download/v0.5/app.exe).
 - If you are looking to test this and run the python code
     - Clone the repository
     - Before first run, launch the build-gui-files.bat file (Only has to be done once after cloning/pulling new version)
